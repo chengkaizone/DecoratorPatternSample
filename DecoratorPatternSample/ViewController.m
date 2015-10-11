@@ -7,7 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "DecoratorGamePlayer.h"
 
+/**
+ *  装饰者模式的简单运用
+ *  这种设计模式的可替代方案:(分类(有一定的缺点,最好保证不能重写已经存在的方法,添加自定义的属性需要额外的处理),继承)
+ *  参考自YouXianMing大师的理解
+ */
 @interface ViewController ()
 
 @end
@@ -16,12 +22,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    DecoratorGamePlayer *decControl = [DecoratorGamePlayer new];
+    
+    [decControl execAll];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end
